@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="Body">
+    <div>
+        <h1>Guess The Number</h1>
+        <p style="color:rgb(62, 120, 122); font-family: 
+        'Times New Roman';">Between 0-100</p>
+        <input id="GuessInput" type="number" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+        <br>
+        <br>
+        <button onclick="guessNumber()">
+            Guess
+        </button>
+        <br>
+        <p id="Answer"></p>
+        <p id="Attempts"></p>
+        <button onclick="RestartGame()">
+            Reset
+        </button>
+        <script src="script.js"></script>
+    </div>
+    <br>
+    <br>
+    <h3>Instructions</h3>
+    <p> The system selects a random number within a fixed range (example: 1 to 100). <br>
+        Your goal is to guess the correct number in as few tries as possible. <br>
+        After each guess, you will receive a hint:<br>
+        “Too high” → your guess is above the number<br>
+        “Too low” → your guess is below the number<br>
+        Keep guessing until you find the correct number.<br>
+        The game ends when you reset it..<br>
+        Your number of attempts will be displayed.<br>
+        Invalid inputs (letters, symbols, empty input) will count as attempts.</p><br>
+</body>
+
+</html>
